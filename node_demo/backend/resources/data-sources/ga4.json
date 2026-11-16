@@ -1,0 +1,45 @@
+{
+  "platform": "ga4",
+  "rows": [
+    {
+      "segment": "facebook",
+      "date": "2026-10-12",
+      "revenue": 1232.6
+    },
+    {
+      "segment": "facebook",
+      "date": "2026-10-02",
+      "revenue": 38417.47
+    },
+    {
+      "segment": "google",
+      "date": "2026-10-12",
+      "revenue": 34687.4
+    },
+    {
+      "segment": "google",
+      "date": "2026-10-02",
+      "revenue": 93994.92
+    },
+    {
+      "segment": "direct",
+      "date": "2026-10-12",
+      "revenue": 10530
+    },
+    {
+      "segment": "direct",
+      "date": "2026-10-02",
+      "revenue": 20000
+    },
+    {
+      "segment": "organic",
+      "date": "2026-10-02",
+      "revenue": 65000
+    },
+    {
+      "segment": "other",
+      "date": "2026-10-02",
+      "revenue": 99205.6
+    }
+  ]
+}

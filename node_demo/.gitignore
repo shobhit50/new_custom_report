@@ -1,0 +1,5 @@
+node_modules/
+backend/data/configs/*.json
+backend/data/datasets.json
+backend/data/output/
+*.log

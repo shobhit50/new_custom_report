@@ -1,0 +1,38 @@
+2026-10-27 local verification
+Source references: account-weaver/weaver/handlers/creative_custom_reports.py and weaver/templates/img/; dynamic_html_report_integration/reference_engine.py and fixtures_30.json.
+Data_Source JSON files were empty placeholders; populated with clearly documented synthetic fixture datasets.
+PASS: default Python_render.py generated output/report.html and output/report.png.
+PASS: all 30 fixture configs rendered through report_template.html; table counts and Jinja completion checked.
+PASS: output/report.png visually inspected: logos, grouped headers, rows and footer rendered.
+No existing Account Weaver .log files found to copy.
+2026-10-27 platform source update
+PASS: Data_Source contains Google Ads, Meta Ads, GA4 and Shopify JSON only.
+HISTORICAL (superseded): config source bindings used platform file names directly; Google spend changed independently of Meta spend.
+PASS: default report regenerated as HTML and PNG after platform source update.
+NOTE: checked-in rows remain synthetic samples; no live platform API data was pulled.
+2026-10-27 explicit pipeline update
+HISTORICAL (superseded): duplicate-grain rows were aggregated by the first local builder. This behavior was removed after the dataset handoff review.
+PASS: Python_render.py reads the saved Data_Set with template_config/google_WOW.json and regenerates HTML and PNG.
+2026-10-27 dataset handoff review
+PASS: source identities are separate from five report-ready dataset IDs; view config uses dataset IDs.
+PASS: duplicate source grain is rejected; no implicit aggregation or join.
+PASS: Meta campaign/daily normalization maps inspected connector fields and rejects duplicate identity and NaN (3 focused tests).
+PASS: default HTML and PNG regenerated after these changes.
+NOTE: API fetch, auth, real GA4 attribution, generic DatasetDefinition and joins remain unimplemented research decisions.
+2026-10-27 DSR reference reproduction
+PASS: dsr_reference.json validates against the unchanged schema and compiles 13 metric rows.
+PASS: all displayed values match the supplied DSR.jpg reference, including calculated conversion rate, total spend, CPT, CAC, ROI and AOV.
+HISTORICAL (superseded): a separate DSR runner and dataset fixture were used initially. Both were removed after user correction.
+PASS: existing Python_render.py generated DSR HTML and PNG from the frozen-schema config; PNG visually inspected.
+NOTE: DSR base values are static literals in the config; this is not a live platform data-binding test. The obscured center client logo was not reproduced.
+2026-10-27 batch rendering update
+PASS: running Python_render.py with no --config rendered all three JSON configs in template_config.
+PASS: output/report.html lists/previews all three; output/report.png contains all three images.
+PASS: --config still renders one config and preserves the combined gallery.
+2026-10-27 PNG-only output update
+PASS: default run generated dsr_reference.png, google_WOW.png, simple_tabular.png and combined report.png.
+PASS: no persistent HTML report files remain in output/; HTML markup is temporary internal input to the PNG renderer.
+2026-10-27 summary image reference
+PASS: summary_reference.json validates against the unchanged schema with 3 grouped periods, 13 columns and 11 rows.
+PASS: output/summary_reference.png visually inspected; default batch includes all four configs and only PNG outputs.
+NOTE: summary values are static literals transcribed from sumery.jpg, not live platform data.

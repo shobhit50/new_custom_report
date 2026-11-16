@@ -1,0 +1,5 @@
+{
+  "name": "@report-studio/shared",
+  "private": true,
+  "type": "module"
+}

@@ -1,0 +1,69 @@
+{
+  "breakdowns": ["day", "week", "month"],
+  "platforms": [
+    {
+      "id": "google_ads",
+      "label": "Google Ads",
+      "accounts": [{"ref": "demo_google_account", "label": "Demo Google Ads account"}],
+      "levels": [
+        {
+          "id": "campaign",
+          "label": "Campaign",
+          "dimensions": ["date", "account_id", "campaign_id", "campaign_name"],
+          "metrics": ["spend", "clicks", "impressions"]
+        }
+      ]
+    },
+    {
+      "id": "meta_ads",
+      "label": "Meta Ads",
+      "accounts": [{"ref": "demo_meta_account", "label": "Demo Meta Ads account"}],
+      "levels": [
+        {
+          "id": "campaign",
+          "label": "Campaign",
+          "dimensions": ["date", "account_id", "campaign_id", "campaign_name"],
+          "metrics": ["spend", "clicks", "impressions"]
+        },
+        {
+          "id": "account",
+          "label": "Account",
+          "dimensions": ["date", "account_id"],
+          "metrics": ["spend", "clicks", "impressions"]
+        }
+      ]
+    },
+    {
+      "id": "ga4",
+      "label": "GA4",
+      "accounts": [{"ref": "demo_ga4_property", "label": "Demo GA4 property"}],
+      "levels": [
+        {
+          "id": "session_campaign",
+          "label": "Session campaign",
+          "dimensions": ["date", "source_medium", "google_ads_customer_id", "google_ads_campaign_id"],
+          "metrics": ["sessions", "revenue"]
+        },
+        {
+          "id": "session_source_medium",
+          "label": "Session source / medium",
+          "dimensions": ["date", "source_medium"],
+          "metrics": ["sessions", "revenue"]
+        }
+      ]
+    },
+    {
+      "id": "shopify",
+      "label": "Shopify",
+      "accounts": [{"ref": "demo_shop", "label": "Demo Shopify shop"}],
+      "levels": [
+        {
+          "id": "day",
+          "label": "Daily sales",
+          "dimensions": ["date"],
+          "metrics": ["revenue", "transactions", "sessions"]
+        }
+      ]
+    }
+  ]
+}

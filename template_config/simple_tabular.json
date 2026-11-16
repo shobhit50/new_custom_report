@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "template_id": null,
+  "template_name": "Simple Daily Performance",
+  "sources": {},
+  "blocks": [
+    {
+      "id": "daily_performance",
+      "title": "Daily Performance — 12 Oct 2026",
+      "tables": [
+        {
+          "id": "daily_summary",
+          "periods": {
+            "day": {
+              "label": "12 Oct 2026",
+              "start_date": "2026-10-12",
+              "end_date": "2026-10-12"
+            }
+          },
+          "header": [
+            [
+              {"label": "Channel", "key": "channel"},
+              {"label": "Spend", "key": "spend"},
+              {"label": "GA4 Revenue", "key": "revenue"},
+              {"label": "ROAS", "key": "roas"}
+            ]
+          ],
+          "rows": {
+            "mode": "static",
+            "data": [
+              {
+                "key": "meta",
+                "segment": "facebook",
+                "cells": [
+                  {"kind": "literal", "text": "Meta Ads"},
+                  {"kind": "actual", "source": "perf_meta", "metric": "spend", "period": "day", "aggregate": "sum", "format": {"type": "currency", "precision": 2}},
+                  {"kind": "actual", "source": "perf_ga4", "metric": "revenue", "period": "day", "aggregate": "sum", "format": {"type": "currency", "precision": 2}},
+                  {"kind": "calculated", "formula": "DIV(CELL(\"meta\",\"revenue\"),CELL(\"meta\",\"spend\"))", "format": {"type": "number", "precision": 2}}
+                ]
+              },
+              {
+                "key": "google",
+                "segment": "google",
+                "cells": [
+                  {"kind": "literal", "text": "Google Ads"},
+                  {"kind": "actual", "source": "perf_google", "metric": "spend", "period": "day", "aggregate": "sum", "format": {"type": "currency", "precision": 2}},
+                  {"kind": "actual", "source": "perf_ga4", "metric": "revenue", "period": "day", "aggregate": "sum", "format": {"type": "currency", "precision": 2}},
+                  {"kind": "calculated", "formula": "DIV(CELL(\"google\",\"revenue\"),CELL(\"google\",\"spend\"))", "format": {"type": "number", "precision": 2}}
+                ]
+              },
+              {
+                "key": "paid_total",
+                "style": "total",
+                "cells": [
+                  {"kind": "literal", "text": "Total Paid"},
+                  {"kind": "calculated", "formula": "SUM(CELL(\"meta\",\"spend\"),CELL(\"google\",\"spend\"))", "format": {"type": "currency", "precision": 2}},
+                  {"kind": "calculated", "formula": "SUM(CELL(\"meta\",\"revenue\"),CELL(\"google\",\"revenue\"))", "format": {"type": "currency", "precision": 2}},
+                  {"kind": "calculated", "formula": "DIV(CELL(\"paid_total\",\"revenue\"),CELL(\"paid_total\",\"spend\"))", "format": {"type": "number", "precision": 2}}
+                ]
+              },
+              {
+                "key": "shopify",
+                "cells": [
+                  {"kind": "literal", "text": "Shopify Revenue"},
+                  {"kind": "literal", "text": ""},
+                  {"kind": "actual", "source": "perf_shopify", "metric": "revenue", "period": "day", "aggregate": "sum", "format": {"type": "currency", "precision": 2}},
+                  {"kind": "literal", "text": ""}
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "platform": "google_ads",
+  "rows": [
+    {
+      "segment": "google",
+      "date": "2026-10-12",
+      "spend": 14650.35
+    },
+    {
+      "segment": "google",
+      "date": "2026-10-02",
+      "spend": 106640.53
+    }
+  ]
+}

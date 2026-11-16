@@ -1,0 +1,640 @@
+{
+  "schema_version": 1,
+  "template_id": null,
+  "template_name": "Performance Marketing + B2B",
+  "sources": {},
+  "blocks": [
+    {
+      "id": "performance",
+      "title": "Performance Marketing",
+      "tables": [
+        {
+          "id": "perf",
+          "periods": {
+            "previous_day": {
+              "label": "Previous Day",
+              "start_date": "2026-10-12",
+              "end_date": "2026-10-12"
+            },
+            "mtd": {
+              "label": "MTD",
+              "start_date": "2026-10-01",
+              "end_date": "2026-10-12"
+            }
+          },
+          "header": [
+            [
+              {
+                "label": "Channel",
+                "key": "channel",
+                "rowspan": 2
+              },
+              {
+                "label": "Previous Day",
+                "period": "previous_day",
+                "colspan": 3
+              },
+              {
+                "label": "MTD",
+                "period": "mtd",
+                "colspan": 3
+              }
+            ],
+            [
+              {
+                "label": "Spend",
+                "key": "sp_prev"
+              },
+              {
+                "label": "Revenue",
+                "key": "rev_prev"
+              },
+              {
+                "label": "ROAS",
+                "key": "roas_prev"
+              },
+              {
+                "label": "Spend",
+                "key": "sp_mtd"
+              },
+              {
+                "label": "Revenue",
+                "key": "rev_mtd"
+              },
+              {
+                "label": "ROAS",
+                "key": "roas_mtd"
+              }
+            ]
+          ],
+          "rows": {
+            "mode": "static",
+            "data": [
+              {
+                "key": "facebook",
+                "style": "normal",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Facebook"
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_meta",
+                    "metric": "spend",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_ga4",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"facebook\",\"rev_prev\"),CELL(\"facebook\",\"sp_prev\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_meta",
+                    "metric": "spend",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_ga4",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"facebook\",\"rev_mtd\"),CELL(\"facebook\",\"sp_mtd\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ],
+                "segment": "facebook"
+              },
+              {
+                "key": "google",
+                "style": "normal",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Google"
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_google",
+                    "metric": "spend",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_ga4",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"google\",\"rev_prev\"),CELL(\"google\",\"sp_prev\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_google",
+                    "metric": "spend",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_ga4",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"google\",\"rev_mtd\"),CELL(\"google\",\"sp_mtd\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ],
+                "segment": "google"
+              },
+              {
+                "key": "paid",
+                "style": "total",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Total Paid"
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "SUM(CELL(\"facebook\",\"sp_prev\"),CELL(\"google\",\"sp_prev\"))",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "SUM(CELL(\"facebook\",\"rev_prev\"),CELL(\"google\",\"rev_prev\"))",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"paid\",\"rev_prev\"),CELL(\"paid\",\"sp_prev\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "SUM(CELL(\"facebook\",\"sp_mtd\"),CELL(\"google\",\"sp_mtd\"))",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "SUM(CELL(\"facebook\",\"rev_mtd\"),CELL(\"google\",\"rev_mtd\"))",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"paid\",\"rev_mtd\"),CELL(\"paid\",\"sp_mtd\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "direct",
+                "style": "normal",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Direct"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_ga4",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_ga4",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  }
+                ],
+                "segment": "direct"
+              },
+              {
+                "key": "organic",
+                "style": "normal",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Organic"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_ga4",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_ga4",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  }
+                ],
+                "segment": "organic"
+              },
+              {
+                "key": "other",
+                "style": "normal",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Other"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_ga4",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_ga4",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  }
+                ],
+                "segment": "other"
+              },
+              {
+                "key": "ga4total",
+                "style": "total",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Total GA4"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_ga4",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_ga4",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "key": "shopify",
+                "style": "normal",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Shopify Revenue"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_shopify",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "perf_shopify",
+                    "metric": "revenue",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2b",
+      "title": "B2B Lead Generation",
+      "tables": [
+        {
+          "id": "b2b",
+          "periods": {
+            "previous_day": {
+              "label": "Previous Day",
+              "start_date": "2026-10-12",
+              "end_date": "2026-10-12"
+            },
+            "mtd": {
+              "label": "MTD",
+              "start_date": "2026-10-01",
+              "end_date": "2026-10-12"
+            }
+          },
+          "header": [
+            [
+              {
+                "label": "Channel",
+                "key": "channel",
+                "rowspan": 2
+              },
+              {
+                "label": "Previous Day",
+                "period": "previous_day",
+                "colspan": 3
+              },
+              {
+                "label": "MTD",
+                "period": "mtd",
+                "colspan": 3
+              }
+            ],
+            [
+              {
+                "label": "Spend",
+                "key": "sp_prev"
+              },
+              {
+                "label": "Leads",
+                "key": "rev_prev"
+              },
+              {
+                "label": "CPL",
+                "key": "cpl_prev"
+              },
+              {
+                "label": "Spend",
+                "key": "sp_mtd"
+              },
+              {
+                "label": "Leads",
+                "key": "rev_mtd"
+              },
+              {
+                "label": "CPL",
+                "key": "cpl_mtd"
+              }
+            ]
+          ],
+          "rows": {
+            "mode": "static",
+            "data": [
+              {
+                "key": "facebook",
+                "style": "normal",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Facebook"
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "b2b_meta",
+                    "metric": "spend",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "b2b_meta",
+                    "metric": "leads",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "integer"
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"facebook\",\"sp_prev\"),CELL(\"facebook\",\"rev_prev\"))",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "b2b_meta",
+                    "metric": "spend",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "actual",
+                    "source": "b2b_meta",
+                    "metric": "leads",
+                    "aggregate": "sum",
+                    "format": {
+                      "type": "integer"
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"facebook\",\"sp_mtd\"),CELL(\"facebook\",\"rev_mtd\"))",
+                    "format": {
+                      "type": "currency",
+                      "precision": 2
+                    }
+                  }
+                ],
+                "segment": "facebook"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

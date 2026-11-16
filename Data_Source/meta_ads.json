@@ -1,0 +1,33 @@
+{
+  "platform": "meta_ads",
+  "rows": [
+    {
+      "segment": "facebook",
+      "date": "2026-10-12",
+      "report_scope": "performance",
+      "spend": 9651.7,
+      "leads": null
+    },
+    {
+      "segment": "facebook",
+      "date": "2026-10-02",
+      "report_scope": "performance",
+      "spend": 83932.73,
+      "leads": null
+    },
+    {
+      "segment": "facebook",
+      "date": "2026-10-12",
+      "report_scope": "b2b",
+      "spend": 2974.8,
+      "leads": 13
+    },
+    {
+      "segment": "facebook",
+      "date": "2026-10-02",
+      "report_scope": "b2b",
+      "spend": 38156.78,
+      "leads": 122
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "platform": "shopify",
+  "rows": [
+    {
+      "segment": "shopify",
+      "date": "2026-10-12",
+      "revenue": 22600
+    },
+    {
+      "segment": "shopify",
+      "date": "2026-10-02",
+      "revenue": 42100
+    }
+  ]
+}

@@ -1,0 +1,581 @@
+{
+  "schema_version": 1,
+  "template_id": null,
+  "template_name": "Daily Performance Report (DSR reference)",
+  "sources": {},
+  "blocks": [
+    {
+      "id": "daily_performance",
+      "title": "",
+      "tables": [
+        {
+          "id": "dsr",
+          "header": [
+            [
+              {
+                "label": "Daily Performance Report",
+                "key": "metric"
+              },
+              {
+                "label": "MTD-Oct'26",
+                "key": "mtd"
+              },
+              {
+                "label": "13 Oct",
+                "key": "oct13"
+              },
+              {
+                "label": "12 Oct",
+                "key": "oct12"
+              },
+              {
+                "label": "11 Oct",
+                "key": "oct11"
+              }
+            ]
+          ],
+          "rows": {
+            "mode": "static",
+            "data": [
+              {
+                "key": "revenue",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Revenue as per GA4"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "370079.11",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "7011.12",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "46450.0",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "46563.05",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "transactions",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Transactions as per GA4"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "71",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "3",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "7",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "5",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "sessions",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Sessions as per GA4"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "8577",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "251",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "725",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "611",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "new_users",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "New Users as per GA4"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "5890",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "186",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "484",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "456",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "add_to_carts",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Add to Carts as per GA4"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "1617",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "28",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "57",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "104",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "google_spend",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Amount Spent (Google Ads)"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "3251244.74",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "113544.42",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "238001.54",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "405993.76",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "meta_spend",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Amount Spent (Meta)"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "889623.92",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "41390.91",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "85423.06",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "125163.06",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "conversion_rate",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Conversion Rate"
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "100*DIV(CELL(\"transactions\",\"mtd\"),CELL(\"sessions\",\"mtd\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "100*DIV(CELL(\"transactions\",\"oct13\"),CELL(\"sessions\",\"oct13\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "100*DIV(CELL(\"transactions\",\"oct12\"),CELL(\"sessions\",\"oct12\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "100*DIV(CELL(\"transactions\",\"oct11\"),CELL(\"sessions\",\"oct11\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "total_spend",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Total Amount Spent (Performance With GST)"
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "SUM(CELL(\"google_spend\",\"mtd\"),CELL(\"meta_spend\",\"mtd\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "SUM(CELL(\"google_spend\",\"oct13\"),CELL(\"meta_spend\",\"oct13\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "SUM(CELL(\"google_spend\",\"oct12\"),CELL(\"meta_spend\",\"oct12\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "SUM(CELL(\"google_spend\",\"oct11\"),CELL(\"meta_spend\",\"oct11\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ],
+                "style": "total"
+              },
+              {
+                "key": "cpt",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "CPT"
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"total_spend\",\"mtd\"),CELL(\"transactions\",\"mtd\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"total_spend\",\"oct13\"),CELL(\"transactions\",\"oct13\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"total_spend\",\"oct12\"),CELL(\"transactions\",\"oct12\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"total_spend\",\"oct11\"),CELL(\"transactions\",\"oct11\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "cac",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "CAC"
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"total_spend\",\"mtd\"),CELL(\"new_users\",\"mtd\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"total_spend\",\"oct13\"),CELL(\"new_users\",\"oct13\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"total_spend\",\"oct12\"),CELL(\"new_users\",\"oct12\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"total_spend\",\"oct11\"),CELL(\"new_users\",\"oct11\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "roi",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Overall ROI as per GA4"
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"revenue\",\"mtd\"),CELL(\"total_spend\",\"mtd\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"revenue\",\"oct13\"),CELL(\"total_spend\",\"oct13\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"revenue\",\"oct12\"),CELL(\"total_spend\",\"oct12\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"revenue\",\"oct11\"),CELL(\"total_spend\",\"oct11\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "aov",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Overall AOV"
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"revenue\",\"mtd\"),CELL(\"transactions\",\"mtd\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"revenue\",\"oct13\"),CELL(\"transactions\",\"oct13\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"revenue\",\"oct12\"),CELL(\"transactions\",\"oct12\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "calculated",
+                    "formula": "DIV(CELL(\"revenue\",\"oct11\"),CELL(\"transactions\",\"oct11\"))",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "periods": {}
+        }
+      ]
+    }
+  ]
+}

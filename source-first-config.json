@@ -1,0 +1,831 @@
+{
+  "contract_version": 1,
+  "breakdown": "day",
+  "inputs": [
+    {
+      "id": "google",
+      "platform": "google_ads",
+      "account_refs": [
+        "demo_google_account"
+      ],
+      "level": "campaign",
+      "dimensions": [
+        "date",
+        "account_id",
+        "campaign_id",
+        "campaign_name"
+      ],
+      "metrics": [
+        "spend",
+        "clicks",
+        "impressions"
+      ]
+    },
+    {
+      "id": "meta",
+      "platform": "meta_ads",
+      "account_refs": [
+        "demo_meta_account"
+      ],
+      "level": "campaign",
+      "dimensions": [
+        "date",
+        "account_id",
+        "campaign_id",
+        "campaign_name"
+      ],
+      "metrics": [
+        "spend",
+        "clicks",
+        "impressions"
+      ]
+    },
+    {
+      "id": "ga4_google",
+      "platform": "ga4",
+      "account_refs": [
+        "demo_ga4_property"
+      ],
+      "level": "session_campaign",
+      "dimensions": [
+        "date",
+        "source_medium",
+        "google_ads_customer_id",
+        "google_ads_campaign_id"
+      ],
+      "metrics": [
+        "sessions",
+        "revenue"
+      ],
+      "filters": [
+        {
+          "dimension": "source_medium",
+          "operator": "in",
+          "values": [
+            "google / cpc",
+            "google/cpc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga4_meta",
+      "platform": "ga4",
+      "account_refs": [
+        "demo_ga4_property"
+      ],
+      "level": "session_source_medium",
+      "dimensions": [
+        "date",
+        "source_medium"
+      ],
+      "metrics": [
+        "sessions",
+        "revenue"
+      ],
+      "filters": [
+        {
+          "dimension": "source_medium",
+          "operator": "in",
+          "values": [
+            "Meta / MetaAds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopify",
+      "platform": "shopify",
+      "account_refs": [
+        "demo_shop"
+      ],
+      "level": "day",
+      "dimensions": [
+        "date"
+      ],
+      "metrics": [
+        "revenue",
+        "transactions",
+        "sessions"
+      ]
+    }
+  ],
+  "combinations": [
+    {
+      "id": "google",
+      "platforms": [
+        "google_ads"
+      ],
+      "eligible_inputs": [
+        "google"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Daily Google totals; sum additive metrics."
+        },
+        {
+          "by": [
+            "date",
+            "account_id"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "One row per Google account and date."
+        },
+        {
+          "by": [
+            "date",
+            "account_id",
+            "campaign_id"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Campaign identity; campaign_name is a display attribute."
+        },
+        {
+          "by": [
+            "date",
+            "account_id",
+            "campaign_name"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Name-based category only; different campaigns can share or change names."
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "platforms": [
+        "meta_ads"
+      ],
+      "eligible_inputs": [
+        "meta"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Daily Meta totals; sum additive metrics."
+        },
+        {
+          "by": [
+            "date",
+            "account_id"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "One row per Meta account and date."
+        },
+        {
+          "by": [
+            "date",
+            "account_id",
+            "campaign_id"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Campaign identity; campaign_name is a display attribute."
+        },
+        {
+          "by": [
+            "date",
+            "account_id",
+            "campaign_name"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Name-based category only; different campaigns can share or change names."
+        }
+      ]
+    },
+    {
+      "id": "ga4",
+      "platforms": [
+        "ga4"
+      ],
+      "eligible_inputs": [
+        "ga4_google",
+        "ga4_meta"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Only the selected Google-paid and Meta-paid GA4 streams; not all property traffic."
+        },
+        {
+          "by": [
+            "date",
+            "source_medium"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "GA4 traffic kept by its actual source / medium value."
+        },
+        {
+          "by": [
+            "date",
+            "google_ads_customer_id",
+            "google_ads_campaign_id"
+          ],
+          "availability": "conditional",
+          "metric_coverage": "partial",
+          "note": "Google-attributed GA4 stream only; IDs must be populated and duplicate groups aggregated.",
+          "applies_to": [
+            "ga4_google"
+          ]
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "conditional",
+          "metric_coverage": "all",
+          "note": "Map each selected source / medium to exactly one channel; handle unmapped traffic explicitly."
+        }
+      ]
+    },
+    {
+      "id": "shopify",
+      "platforms": [
+        "shopify"
+      ],
+      "eligible_inputs": [
+        "shopify"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Current Shopify input contains daily sales metrics only."
+        },
+        {
+          "by": [
+            "date",
+            "source_medium"
+          ],
+          "availability": "extended",
+          "metric_coverage": "all",
+          "note": "Requires a new verified Shopify attribution source and policy for assigning orders to visits."
+        }
+      ]
+    },
+    {
+      "id": "google_meta",
+      "platforms": [
+        "google_ads",
+        "meta_ads"
+      ],
+      "eligible_inputs": [
+        "google",
+        "meta"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Paid totals can sum compatible additive metrics after currency and account checks."
+        },
+        {
+          "by": [
+            "date",
+            "platform"
+          ],
+          "availability": "current",
+          "metric_coverage": "source_separated",
+          "note": "platform is derived from source identity; Google and Meta rows remain separate."
+        },
+        {
+          "by": [
+            "date",
+            "platform",
+            "account_id",
+            "campaign_id"
+          ],
+          "availability": "current",
+          "metric_coverage": "source_separated",
+          "note": "Append campaign rows; platform and account keep campaign IDs distinct."
+        }
+      ]
+    },
+    {
+      "id": "google_ga4",
+      "platforms": [
+        "google_ads",
+        "ga4"
+      ],
+      "eligible_inputs": [
+        "google",
+        "ga4_google"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Google spend from Ads and selected revenue/sessions from filtered GA4; suppliers explicit."
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "conditional",
+          "metric_coverage": "all",
+          "note": "Derive Google channel from both inputs; retain only mapped Google-paid GA4 traffic."
+        },
+        {
+          "by": [
+            "date",
+            "google_customer_id",
+            "google_campaign_id"
+          ],
+          "availability": "conditional",
+          "metric_coverage": "all",
+          "note": "Map Ads account_id/campaign_id to GA4 Google Ads IDs; require populated IDs and unique grouped keys.",
+          "field_map": {
+            "google": {
+              "google_customer_id": "account_id",
+              "google_campaign_id": "campaign_id"
+            },
+            "ga4_google": {
+              "google_customer_id": "google_ads_customer_id",
+              "google_campaign_id": "google_ads_campaign_id"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "google_shopify",
+      "platforms": [
+        "google_ads",
+        "shopify"
+      ],
+      "eligible_inputs": [
+        "google",
+        "shopify"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Align daily Ads metrics with overall Shopify sales; no campaign attribution implied."
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "extended",
+          "metric_coverage": "partial",
+          "note": "Needs Shopify order/visit attribution and a documented channel mapping."
+        },
+        {
+          "by": [
+            "date",
+            "campaign_id"
+          ],
+          "availability": "extended",
+          "metric_coverage": "partial",
+          "note": "Needs Shopify campaign UTM or another verified cross-platform identity."
+        }
+      ]
+    },
+    {
+      "id": "meta_ga4",
+      "platforms": [
+        "meta_ads",
+        "ga4"
+      ],
+      "eligible_inputs": [
+        "meta",
+        "ga4_meta"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Meta spend and filtered GA4 metrics align as daily totals, not campaign matches."
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "conditional",
+          "metric_coverage": "all",
+          "note": "Map selected Meta source / medium values to one Meta channel without overlap."
+        },
+        {
+          "by": [
+            "date",
+            "meta_campaign_id"
+          ],
+          "availability": "extended",
+          "metric_coverage": "all",
+          "note": "Requires GA4 manual campaign/UTM identity added to input and validated against Meta tracking."
+        }
+      ]
+    },
+    {
+      "id": "meta_shopify",
+      "platforms": [
+        "meta_ads",
+        "shopify"
+      ],
+      "eligible_inputs": [
+        "meta",
+        "shopify"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Align daily Meta metrics with overall Shopify sales; no campaign attribution implied."
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "extended",
+          "metric_coverage": "partial",
+          "note": "Needs Shopify order/visit attribution and a documented channel mapping."
+        },
+        {
+          "by": [
+            "date",
+            "campaign_id"
+          ],
+          "availability": "extended",
+          "metric_coverage": "partial",
+          "note": "Needs Shopify UTM campaign identity mapped to Meta tracking."
+        }
+      ]
+    },
+    {
+      "id": "ga4_shopify",
+      "platforms": [
+        "ga4",
+        "shopify"
+      ],
+      "eligible_inputs": [
+        "ga4_google",
+        "ga4_meta",
+        "shopify"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Keep GA4 revenue and Shopify revenue as separate named metrics or choose one supplier."
+        },
+        {
+          "by": [
+            "date",
+            "source_medium"
+          ],
+          "availability": "extended",
+          "metric_coverage": "partial",
+          "note": "Current Shopify daily input has no source / medium; requires order/visit attribution."
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "extended",
+          "metric_coverage": "partial",
+          "note": "Requires Shopify attribution and GA4 source / medium to channel mapping."
+        }
+      ]
+    },
+    {
+      "id": "google_meta_ga4",
+      "platforms": [
+        "google_ads",
+        "meta_ads",
+        "ga4"
+      ],
+      "eligible_inputs": [
+        "google",
+        "meta",
+        "ga4_google",
+        "ga4_meta"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Paid total requires explicit supplier and aggregation rules; GA4 streams cover selected paid traffic only."
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "conditional",
+          "metric_coverage": "all",
+          "note": "Route Google and Meta Ads plus their filtered GA4 streams to distinct channels; prevent overlapping GA4 values."
+        },
+        {
+          "by": [
+            "date",
+            "platform",
+            "account_id",
+            "campaign_id"
+          ],
+          "availability": "current",
+          "metric_coverage": "partial",
+          "note": "Append Ads campaign rows; current GA4 Meta stream cannot provide campaign-level metrics."
+        },
+        {
+          "by": [
+            "date",
+            "platform",
+            "account_id",
+            "campaign_id"
+          ],
+          "availability": "extended",
+          "metric_coverage": "all",
+          "note": "Full campaign metrics need verified Meta-to-GA4 UTM mapping in addition to Google Ads IDs."
+        }
+      ]
+    },
+    {
+      "id": "google_meta_shopify",
+      "platforms": [
+        "google_ads",
+        "meta_ads",
+        "shopify"
+      ],
+      "eligible_inputs": [
+        "google",
+        "meta",
+        "shopify"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Paid spend can be combined; Shopify revenue remains overall and separately sourced."
+        },
+        {
+          "by": [
+            "date",
+            "platform"
+          ],
+          "availability": "current",
+          "metric_coverage": "source_separated",
+          "note": "Source rows can be stacked; Shopify is its own source, not a paid channel."
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "extended",
+          "metric_coverage": "partial",
+          "note": "Shopify revenue needs verified order/visit attribution before allocation to paid channels."
+        },
+        {
+          "by": [
+            "date",
+            "platform",
+            "campaign_id"
+          ],
+          "availability": "extended",
+          "metric_coverage": "partial",
+          "note": "Shopify campaign attribution requires additional UTM fields and mapping."
+        }
+      ]
+    },
+    {
+      "id": "google_ga4_shopify",
+      "platforms": [
+        "google_ads",
+        "ga4",
+        "shopify"
+      ],
+      "eligible_inputs": [
+        "google",
+        "ga4_google",
+        "shopify"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Google paid metrics and Shopify overall sales can coexist with separate revenue ownership."
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "conditional",
+          "metric_coverage": "partial",
+          "note": "Google Ads + GA4 can form Google channel; Shopify stays overall unless attributed."
+        },
+        {
+          "by": [
+            "date",
+            "google_customer_id",
+            "google_campaign_id"
+          ],
+          "availability": "conditional",
+          "metric_coverage": "partial",
+          "note": "Google Ads + GA4 subset only; Shopify daily revenue cannot be assigned to campaign."
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "extended",
+          "metric_coverage": "all",
+          "note": "Full channel allocation needs Shopify order/visit UTM mapping."
+        }
+      ]
+    },
+    {
+      "id": "meta_ga4_shopify",
+      "platforms": [
+        "meta_ads",
+        "ga4",
+        "shopify"
+      ],
+      "eligible_inputs": [
+        "meta",
+        "ga4_meta",
+        "shopify"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "Meta paid metrics and Shopify overall sales can coexist with separate revenue ownership."
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "conditional",
+          "metric_coverage": "partial",
+          "note": "Meta Ads + GA4 can form Meta channel; Shopify stays overall unless attributed."
+        },
+        {
+          "by": [
+            "date",
+            "meta_campaign_id"
+          ],
+          "availability": "extended",
+          "metric_coverage": "partial",
+          "note": "Needs GA4 manual campaign tracking; Shopify still requires separate order attribution."
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "extended",
+          "metric_coverage": "all",
+          "note": "Full channel allocation needs Shopify order/visit UTM mapping."
+        }
+      ]
+    },
+    {
+      "id": "google_meta_ga4_shopify",
+      "platforms": [
+        "google_ads",
+        "meta_ads",
+        "ga4",
+        "shopify"
+      ],
+      "eligible_inputs": [
+        "google",
+        "meta",
+        "ga4_google",
+        "ga4_meta",
+        "shopify"
+      ],
+      "possible_groupings": [
+        {
+          "by": [
+            "date"
+          ],
+          "availability": "current",
+          "metric_coverage": "all",
+          "note": "All selected metrics can coexist only with explicit metric suppliers; GA4 and Shopify revenue must not be added by default."
+        },
+        {
+          "by": [
+            "date",
+            "platform"
+          ],
+          "availability": "current",
+          "metric_coverage": "source_separated",
+          "note": "Stack source rows while retaining provenance; this is not one attributed platform metric row."
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "conditional",
+          "metric_coverage": "partial",
+          "note": "Paid Ads + filtered GA4 can form Google and Meta channels; Shopify remains overall."
+        },
+        {
+          "by": [
+            "date",
+            "channel"
+          ],
+          "availability": "extended",
+          "metric_coverage": "all",
+          "note": "Full channel metrics need Shopify attribution plus disjoint GA4 routing."
+        },
+        {
+          "by": [
+            "date",
+            "platform",
+            "account_id",
+            "campaign_id"
+          ],
+          "availability": "extended",
+          "metric_coverage": "partial",
+          "note": "Full campaign-level metrics require additional GA4 Meta and Shopify attribution fields/mappings."
+        }
+      ]
+    }
+  ],
+  "combination_grouping_catalog": {
+    "status": "selectable_reference_options_not_active_outputs",
+    "meaning": {
+      "current": "Grouping fields are present in selected inputs; combination execution still needs rules and validation.",
+      "conditional": "Current fields can support this grouping only after the stated mapping, attribution, or uniqueness checks.",
+      "extended": "At least one required field is absent from current inputs and needs a verified connector/API change.",
+      "metric_coverage": "all means selected metrics can be grouped with an explicit supplier/aggregation policy; source_separated means metrics remain on their source rows; partial means named sources must stay separate at this grain."
+    },
+    "field_placement": {
+      "inputs": "Fetch level, selected dimensions, metrics and filters; no permanent group_by.",
+      "source_grain": "Trusted connector metadata, checked against fetched rows.",
+      "combination_group_by": "Per combination output or per-side preparation when a join requires aggregation.",
+      "match_on": "Per combination relationship; distinct from output group_by."
+    },
+    "research_references": [
+      "https://developers.google.com/google-ads/api/docs/reporting/segmentation",
+      "https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema",
+      "https://shopify.dev/docs/api/admin-graphql/latest/objects/CustomerVisit",
+      "https://docs.cloud.google.com/data-studio/blending-tips-and-advanced-concepts"
+    ],
+    "usage": "combinations lists 15 selectable platform/grouping templates. A saved source config contains only user-selected executable relationships; choose operation, match keys, and metric suppliers before saving."
+  }
+}

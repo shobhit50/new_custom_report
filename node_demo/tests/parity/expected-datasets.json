@@ -1,0 +1,150 @@
+{
+  "perf_meta": {
+    "columns": [
+      "segment",
+      "date",
+      "spend"
+    ],
+    "grain": [
+      "segment",
+      "date"
+    ],
+    "rows": [
+      {
+        "segment": "facebook",
+        "date": "2026-10-12",
+        "spend": 9651.7
+      },
+      {
+        "segment": "facebook",
+        "date": "2026-10-02",
+        "spend": 83932.73
+      }
+    ]
+  },
+  "b2b_meta": {
+    "columns": [
+      "segment",
+      "date",
+      "spend",
+      "leads"
+    ],
+    "grain": [
+      "segment",
+      "date"
+    ],
+    "rows": [
+      {
+        "segment": "facebook",
+        "date": "2026-10-12",
+        "spend": 2974.8,
+        "leads": 13
+      },
+      {
+        "segment": "facebook",
+        "date": "2026-10-02",
+        "spend": 38156.78,
+        "leads": 122
+      }
+    ]
+  },
+  "perf_google": {
+    "columns": [
+      "segment",
+      "date",
+      "spend"
+    ],
+    "grain": [
+      "segment",
+      "date"
+    ],
+    "rows": [
+      {
+        "segment": "google",
+        "date": "2026-10-12",
+        "spend": 14650.35
+      },
+      {
+        "segment": "google",
+        "date": "2026-10-02",
+        "spend": 106640.53
+      }
+    ]
+  },
+  "perf_ga4": {
+    "columns": [
+      "segment",
+      "date",
+      "revenue"
+    ],
+    "grain": [
+      "segment",
+      "date"
+    ],
+    "rows": [
+      {
+        "segment": "facebook",
+        "date": "2026-10-12",
+        "revenue": 1232.6
+      },
+      {
+        "segment": "facebook",
+        "date": "2026-10-02",
+        "revenue": 38417.47
+      },
+      {
+        "segment": "google",
+        "date": "2026-10-12",
+        "revenue": 34687.4
+      },
+      {
+        "segment": "google",
+        "date": "2026-10-02",
+        "revenue": 93994.92
+      },
+      {
+        "segment": "direct",
+        "date": "2026-10-12",
+        "revenue": 10530
+      },
+      {
+        "segment": "direct",
+        "date": "2026-10-02",
+        "revenue": 20000
+      },
+      {
+        "segment": "organic",
+        "date": "2026-10-02",
+        "revenue": 65000
+      },
+      {
+        "segment": "other",
+        "date": "2026-10-02",
+        "revenue": 99205.6
+      }
+    ]
+  },
+  "perf_shopify": {
+    "columns": [
+      "segment",
+      "date",
+      "revenue"
+    ],
+    "grain": [
+      "segment",
+      "date"
+    ],
+    "rows": [
+      {
+        "segment": "shopify",
+        "date": "2026-10-12",
+        "revenue": 22600
+      },
+      {
+        "segment": "shopify",
+        "date": "2026-10-02",
+        "revenue": 42100
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "report-studio-node-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node backend/src/app.js",
+    "dev": "node --watch backend/src/app.js",
+    "render": "node backend/src/cli.js",
+    "dataset": "node backend/src/dataset-cli.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" },
+  "workspaces": ["backend", "frontend", "shared"]
+}

@@ -1,0 +1,988 @@
+{
+  "schema_version": 1,
+  "template_id": null,
+  "template_name": "Summary Report - 22 Oct 2026",
+  "sources": {},
+  "blocks": [
+    {
+      "id": "summary",
+      "title": "",
+      "tables": [
+        {
+          "id": "summary_channels",
+          "periods": {},
+          "header": [
+            [
+              {
+                "label": "Channel",
+                "key": "channel",
+                "rowspan": 2
+              },
+              {
+                "label": "22/10/2026",
+                "colspan": 4
+              },
+              {
+                "label": "MTD - October'26",
+                "colspan": 4
+              },
+              {
+                "label": "MTD - September'26",
+                "colspan": 4
+              }
+            ],
+            [
+              {
+                "label": "Spends",
+                "key": "day_spend"
+              },
+              {
+                "label": "Revenue",
+                "key": "day_revenue"
+              },
+              {
+                "label": "Sessions",
+                "key": "day_sessions"
+              },
+              {
+                "label": "ROAS",
+                "key": "day_roas"
+              },
+              {
+                "label": "Spends",
+                "key": "oct_mtd_spend"
+              },
+              {
+                "label": "Revenue",
+                "key": "oct_mtd_revenue"
+              },
+              {
+                "label": "Sessions",
+                "key": "oct_mtd_sessions"
+              },
+              {
+                "label": "ROAS",
+                "key": "oct_mtd_roas"
+              },
+              {
+                "label": "Spends",
+                "key": "sep_mtd_spend"
+              },
+              {
+                "label": "Revenue",
+                "key": "sep_mtd_revenue"
+              },
+              {
+                "label": "Sessions",
+                "key": "sep_mtd_sessions"
+              },
+              {
+                "label": "ROAS",
+                "key": "sep_mtd_roas"
+              }
+            ]
+          ],
+          "rows": {
+            "mode": "static",
+            "data": [
+              {
+                "key": "google",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Google"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "32323.15",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "576",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "4146615.24",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "64600",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "4658228.23",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "87133",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  }
+                ]
+              },
+              {
+                "key": "facebook",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Facebook"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "65964.73",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "8294.25",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "406",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "0.13",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "1689315.74",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "2134596.49",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "60881",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "1.26",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "282481.95",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "6844099.41",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "193800",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "24.23",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "key": "marketing_total",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Marketing Total"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "65964.73",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "40617.4",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "982",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "0.62",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "1689315.74",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "6281211.72",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "125481",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "3.72",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "282481.95",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "11502327.64",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "280933",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "40.72",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ],
+                "style": "total"
+              },
+              {
+                "key": "affiliate",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Affiliate"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  }
+                ]
+              },
+              {
+                "key": "organic",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Organic"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "8873.38",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "144",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "575976.53",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "18017",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "568497.7",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "25282",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  }
+                ]
+              },
+              {
+                "key": "direct",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Direct"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "33867.15",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "563",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "1835167.45",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "493203",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "1414132.43",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "418499",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  }
+                ]
+              },
+              {
+                "key": "email",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Email"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  }
+                ]
+              },
+              {
+                "key": "whatsapp",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "WhatsApp"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  }
+                ]
+              },
+              {
+                "key": "referral",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Referral/Unassigned"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "-"
+                  }
+                ]
+              },
+              {
+                "key": "total",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Total"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "65964.73",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "83357.93",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "1689",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "1.26",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "1689315.74",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "8692355.7",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "636701",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "5.15",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "282481.95",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "13484957.77",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "724714",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "47.74",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ],
+                "style": "total"
+              },
+              {
+                "key": "total_without_affiliate",
+                "cells": [
+                  {
+                    "kind": "literal",
+                    "text": "Total Without Affiliate"
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "65964.73",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "83357.93",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "1689",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "1.26",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "1689315.74",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "8692355.7",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "636701",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "5.15",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "282481.95",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "13484957.77",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "724714",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  },
+                  {
+                    "kind": "literal",
+                    "text": "47.74",
+                    "format": {
+                      "type": "number",
+                      "precision": 2
+                    }
+                  }
+                ],
+                "style": "total"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

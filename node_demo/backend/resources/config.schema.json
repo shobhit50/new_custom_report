@@ -1,0 +1,612 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/universal-report-v5.schema.json",
+  "title": "Research Universal Report Layout V5",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "template_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "template_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "sources": {
+      "type": "object"
+    },
+    "blocks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 40,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "type": {
+            "enum": [
+              "pivot"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "tables": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 30,
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 160
+                },
+                "periods": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object",
+                    "properties": {
+                      "label": {
+                        "type": "string"
+                      },
+                      "start_date": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 160
+                      },
+                      "end_date": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 160
+                      }
+                    },
+                    "required": [
+                      "start_date",
+                      "end_date"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "header": {
+                  "type": "array",
+                  "maxItems": 8,
+                  "items": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 120,
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "maxLength": 160
+                        },
+                        "key": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 160
+                        },
+                        "rowspan": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "colspan": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "source": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 160
+                        },
+                        "metric": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 160
+                        },
+                        "segment": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 160
+                        },
+                        "period": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 160
+                        },
+                        "repeat": {
+                          "type": "object",
+                          "properties": {
+                            "by": {
+                              "enum": [
+                                "values",
+                                "days"
+                              ]
+                            },
+                            "as": {
+                              "type": "string",
+                              "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+                            },
+                            "source": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 160
+                            },
+                            "field": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 160
+                            },
+                            "period": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 160
+                            },
+                            "sort": {
+                              "enum": [
+                                "source",
+                                "asc",
+                                "desc"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "by",
+                            "as"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "label"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "rows": {
+                  "type": "object",
+                  "properties": {
+                    "mode": {
+                      "enum": [
+                        "static",
+                        "dynamic"
+                      ]
+                    },
+                    "source": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 160
+                    },
+                    "row_key": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 160
+                      },
+                      "minItems": 1,
+                      "maxItems": 10,
+                      "uniqueItems": true
+                    },
+                    "data": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 2000,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "key": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 160
+                          },
+                          "style": {
+                            "enum": [
+                              "normal",
+                              "total"
+                            ]
+                          },
+                          "segment": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 160
+                          },
+                          "source": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 160
+                          },
+                          "metric": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 160
+                          },
+                          "period": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 160
+                          },
+                          "where": {
+                            "type": "object",
+                            "additionalProperties": {
+                              "type": [
+                                "string",
+                                "number",
+                                "boolean",
+                                "null"
+                              ]
+                            },
+                            "maxProperties": 20
+                          },
+                          "repeat": {
+                            "const": "records"
+                          },
+                          "cells": {
+                            "type": "array",
+                            "minItems": 1,
+                            "maxItems": 120,
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "enum": [
+                                    "literal",
+                                    "field",
+                                    "actual",
+                                    "calculated"
+                                  ]
+                                },
+                                "text": {
+                                  "type": "string"
+                                },
+                                "field": {
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 160
+                                },
+                                "source": {
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 160
+                                },
+                                "metric": {
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 160
+                                },
+                                "segment": {
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 160
+                                },
+                                "period": {
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 160
+                                },
+                                "repeat": {
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 160
+                                },
+                                "formula": {
+                                  "type": "string",
+                                  "maxLength": 512
+                                },
+                                "format": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "enum": [
+                                        "text",
+                                        "integer",
+                                        "number",
+                                        "currency",
+                                        "percent"
+                                      ]
+                                    },
+                                    "precision": {
+                                      "type": "integer",
+                                      "minimum": 0,
+                                      "maximum": 6
+                                    }
+                                  },
+                                  "required": [
+                                    "type"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                "aggregate": {
+                                  "enum": [
+                                    "none",
+                                    "sum",
+                                    "avg",
+                                    "min",
+                                    "max",
+                                    "count"
+                                  ]
+                                },
+                                "where": {
+                                  "type": "object",
+                                  "additionalProperties": {
+                                    "type": [
+                                      "string",
+                                      "number",
+                                      "boolean",
+                                      "null"
+                                    ]
+                                  },
+                                  "maxProperties": 20
+                                }
+                              },
+                              "required": [
+                                "kind"
+                              ],
+                              "additionalProperties": false,
+                              "allOf": [
+                                {
+                                  "if": {
+                                    "properties": {
+                                      "kind": {
+                                        "const": "literal"
+                                      }
+                                    }
+                                  },
+                                  "then": {
+                                    "required": [
+                                      "text"
+                                    ],
+                                    "not": {
+                                      "anyOf": [
+                                        {
+                                          "required": [
+                                            "source"
+                                          ]
+                                        },
+                                        {
+                                          "required": [
+                                            "metric"
+                                          ]
+                                        },
+                                        {
+                                          "required": [
+                                            "formula"
+                                          ]
+                                        },
+                                        {
+                                          "required": [
+                                            "field"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "if": {
+                                    "properties": {
+                                      "kind": {
+                                        "const": "field"
+                                      }
+                                    }
+                                  },
+                                  "then": {
+                                    "required": [
+                                      "field"
+                                    ],
+                                    "not": {
+                                      "anyOf": [
+                                        {
+                                          "required": [
+                                            "formula"
+                                          ]
+                                        },
+                                        {
+                                          "required": [
+                                            "metric"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "if": {
+                                    "properties": {
+                                      "kind": {
+                                        "const": "calculated"
+                                      }
+                                    }
+                                  },
+                                  "then": {
+                                    "required": [
+                                      "formula"
+                                    ],
+                                    "not": {
+                                      "required": [
+                                        "field"
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "if": {
+                                    "properties": {
+                                      "kind": {
+                                        "const": "actual"
+                                      }
+                                    }
+                                  },
+                                  "then": {
+                                    "not": {
+                                      "anyOf": [
+                                        {
+                                          "required": [
+                                            "formula"
+                                          ]
+                                        },
+                                        {
+                                          "required": [
+                                            "field"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "sort": {
+                            "type": "object",
+                            "properties": {
+                              "field": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 160
+                              },
+                              "direction": {
+                                "enum": [
+                                  "asc",
+                                  "desc"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "field"
+                            ],
+                            "additionalProperties": false
+                          },
+                          "limit": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 2000
+                          }
+                        },
+                        "required": [
+                          "cells"
+                        ],
+                        "additionalProperties": false,
+                        "allOf": [
+                          {
+                            "if": {
+                              "not": {
+                                "required": [
+                                  "repeat"
+                                ]
+                              }
+                            },
+                            "then": {
+                              "required": [
+                                "key"
+                              ]
+                            }
+                          },
+                          {
+                            "if": {
+                              "required": [
+                                "repeat"
+                              ]
+                            },
+                            "then": {
+                              "not": {
+                                "required": [
+                                  "key"
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "mode",
+                    "data"
+                  ],
+                  "additionalProperties": false,
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "mode": {
+                            "const": "dynamic"
+                          }
+                        }
+                      },
+                      "then": {
+                        "required": [
+                          "source",
+                          "row_key"
+                        ]
+                      }
+                    },
+                    {
+                      "if": {
+                        "properties": {
+                          "mode": {
+                            "const": "static"
+                          }
+                        }
+                      },
+                      "then": {
+                        "not": {
+                          "anyOf": [
+                            {
+                              "required": [
+                                "source"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "row_key"
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "periods",
+                "header",
+                "rows"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "tables"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "template_id",
+    "template_name",
+    "sources",
+    "blocks"
+  ],
+  "additionalProperties": false
+}

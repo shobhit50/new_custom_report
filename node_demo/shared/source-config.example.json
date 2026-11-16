@@ -1,0 +1,100 @@
+{
+  "sources": {
+    "contract_version": 1,
+    "breakdown": "day",
+    "inputs": [
+      {
+        "id": "google",
+        "platform": "google_ads",
+        "account_refs": ["demo_google_account"],
+        "level": "campaign",
+        "dimensions": ["date", "account_id", "campaign_id", "campaign_name"],
+        "metrics": ["spend", "clicks", "impressions"]
+      },
+      {
+        "id": "meta",
+        "platform": "meta_ads",
+        "account_refs": ["demo_meta_account"],
+        "level": "campaign",
+        "dimensions": ["date", "account_id", "campaign_id", "campaign_name"],
+        "metrics": ["spend", "clicks", "impressions"]
+      },
+      {
+        "id": "ga4_google",
+        "platform": "ga4",
+        "account_refs": ["demo_ga4_property"],
+        "level": "session_campaign",
+        "dimensions": ["date", "source_medium", "google_ads_customer_id", "google_ads_campaign_id"],
+        "metrics": ["sessions", "revenue"],
+        "filters": [
+          {
+            "dimension": "source_medium",
+            "operator": "in",
+            "values": ["google / cpc", "google/cpc"]
+          }
+        ]
+      },
+      {
+        "id": "ga4_meta",
+        "platform": "ga4",
+        "account_refs": ["demo_ga4_property"],
+        "level": "session_source_medium",
+        "dimensions": ["date", "source_medium"],
+        "metrics": ["sessions", "revenue"],
+        "filters": [
+          {
+            "dimension": "source_medium",
+            "operator": "in",
+            "values": ["Meta / MetaAds"]
+          }
+        ]
+      },
+      {
+        "id": "shopify",
+        "platform": "shopify",
+        "account_refs": ["demo_shop"],
+        "level": "day",
+        "dimensions": ["date"],
+        "metrics": ["revenue", "transactions", "sessions"]
+      }
+    ],
+    "merges": [
+      {
+        "id": "google_paid",
+        "mode": "join",
+        "left": "google",
+        "right": "ga4_google",
+        "prepare": {
+          "left_group_by": ["date", "account_id", "campaign_id"],
+          "right_group_by": ["date", "google_ads_customer_id", "google_ads_campaign_id"]
+        },
+        "keys": [
+          {"left": "date", "right": "date"},
+          {"left": "account_id", "right": "google_ads_customer_id"},
+          {"left": "campaign_id", "right": "google_ads_campaign_id"}
+        ],
+        "join_type": "left",
+        "cardinality": "one_to_one",
+        "unmatched": "keep_null"
+      },
+      {
+        "id": "meta_paid",
+        "mode": "join",
+        "left": "meta",
+        "right": "ga4_meta",
+        "prepare": {
+          "left_group_by": ["date"],
+          "right_group_by": ["date"]
+        },
+        "keys": [{"left": "date", "right": "date"}],
+        "join_type": "left",
+        "cardinality": "one_to_one",
+        "unmatched": "keep_null"
+      }
+    ],
+    "composition": {"mode": "match"},
+    "grouping": {
+      "group_by": ["date", "source"]
+    }
+  }
+}

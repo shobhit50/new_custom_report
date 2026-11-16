@@ -1,0 +1,805 @@
+{
+  "dsr_reference": [
+    {
+      "title": "",
+      "tables": [
+        {
+          "header": [
+            [
+              {
+                "label": "Daily Performance Report",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "MTD-Oct'26",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "13 Oct",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "12 Oct",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "11 Oct",
+                "rowspan": 1,
+                "colspan": 1
+              }
+            ]
+          ],
+          "rows": [
+            {
+              "key": "revenue",
+              "style": "normal",
+              "cells": [
+                "Revenue as per GA4",
+                "370,079.11",
+                "7,011.12",
+                "46,450.00",
+                "46,563.05"
+              ]
+            },
+            {
+              "key": "transactions",
+              "style": "normal",
+              "cells": [
+                "Transactions as per GA4",
+                "71.00",
+                "3.00",
+                "7.00",
+                "5.00"
+              ]
+            },
+            {
+              "key": "sessions",
+              "style": "normal",
+              "cells": [
+                "Sessions as per GA4",
+                "8,577.00",
+                "251.00",
+                "725.00",
+                "611.00"
+              ]
+            },
+            {
+              "key": "new_users",
+              "style": "normal",
+              "cells": [
+                "New Users as per GA4",
+                "5,890.00",
+                "186.00",
+                "484.00",
+                "456.00"
+              ]
+            },
+            {
+              "key": "add_to_carts",
+              "style": "normal",
+              "cells": [
+                "Add to Carts as per GA4",
+                "1,617.00",
+                "28.00",
+                "57.00",
+                "104.00"
+              ]
+            },
+            {
+              "key": "google_spend",
+              "style": "normal",
+              "cells": [
+                "Amount Spent (Google Ads)",
+                "3,251,244.74",
+                "113,544.42",
+                "238,001.54",
+                "405,993.76"
+              ]
+            },
+            {
+              "key": "meta_spend",
+              "style": "normal",
+              "cells": [
+                "Amount Spent (Meta)",
+                "889,623.92",
+                "41,390.91",
+                "85,423.06",
+                "125,163.06"
+              ]
+            },
+            {
+              "key": "conversion_rate",
+              "style": "normal",
+              "cells": [
+                "Conversion Rate",
+                "0.83",
+                "1.20",
+                "0.97",
+                "0.82"
+              ]
+            },
+            {
+              "key": "total_spend",
+              "style": "total",
+              "cells": [
+                "Total Amount Spent (Performance With GST)",
+                "4,140,868.66",
+                "154,935.33",
+                "323,424.60",
+                "531,156.82"
+              ]
+            },
+            {
+              "key": "cpt",
+              "style": "normal",
+              "cells": [
+                "CPT",
+                "58,322.09",
+                "51,645.11",
+                "46,203.51",
+                "106,231.36"
+              ]
+            },
+            {
+              "key": "cac",
+              "style": "normal",
+              "cells": [
+                "CAC",
+                "703.03",
+                "832.99",
+                "668.23",
+                "1,164.82"
+              ]
+            },
+            {
+              "key": "roi",
+              "style": "normal",
+              "cells": [
+                "Overall ROI as per GA4",
+                "0.09",
+                "0.05",
+                "0.14",
+                "0.09"
+              ]
+            },
+            {
+              "key": "aov",
+              "style": "normal",
+              "cells": [
+                "Overall AOV",
+                "5,212.38",
+                "2,337.04",
+                "6,635.71",
+                "9,312.61"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "google_WOW": [
+    {
+      "title": "Performance Marketing",
+      "tables": [
+        {
+          "header": [
+            [
+              {
+                "label": "Channel",
+                "rowspan": 2,
+                "colspan": 1
+              },
+              {
+                "label": "Previous Day",
+                "rowspan": 1,
+                "colspan": 3
+              },
+              {
+                "label": "MTD",
+                "rowspan": 1,
+                "colspan": 3
+              }
+            ],
+            [
+              {
+                "label": "Spend",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Revenue",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "ROAS",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Spend",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Revenue",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "ROAS",
+                "rowspan": 1,
+                "colspan": 1
+              }
+            ]
+          ],
+          "rows": [
+            {
+              "key": "facebook",
+              "style": "normal",
+              "cells": [
+                "Facebook",
+                "₹9,651.70",
+                "₹1,232.60",
+                "0.13",
+                "₹93,584.43",
+                "₹39,650.07",
+                "0.42"
+              ]
+            },
+            {
+              "key": "google",
+              "style": "normal",
+              "cells": [
+                "Google",
+                "₹14,650.35",
+                "₹34,687.40",
+                "2.37",
+                "₹121,290.88",
+                "₹128,682.32",
+                "1.06"
+              ]
+            },
+            {
+              "key": "paid",
+              "style": "total",
+              "cells": [
+                "Total Paid",
+                "₹24,302.05",
+                "₹35,920.00",
+                "1.48",
+                "₹214,875.31",
+                "₹168,332.39",
+                "0.78"
+              ]
+            },
+            {
+              "key": "direct",
+              "style": "normal",
+              "cells": [
+                "Direct",
+                "",
+                "₹10,530.00",
+                "",
+                "",
+                "₹30,530.00",
+                ""
+              ]
+            },
+            {
+              "key": "organic",
+              "style": "normal",
+              "cells": [
+                "Organic",
+                "",
+                "-",
+                "",
+                "",
+                "₹65,000.00",
+                ""
+              ]
+            },
+            {
+              "key": "other",
+              "style": "normal",
+              "cells": [
+                "Other",
+                "",
+                "-",
+                "",
+                "",
+                "₹99,205.60",
+                ""
+              ]
+            },
+            {
+              "key": "ga4total",
+              "style": "total",
+              "cells": [
+                "Total GA4",
+                "",
+                "₹46,450.00",
+                "",
+                "",
+                "₹363,067.99",
+                ""
+              ]
+            },
+            {
+              "key": "shopify",
+              "style": "normal",
+              "cells": [
+                "Shopify Revenue",
+                "",
+                "₹22,600.00",
+                "",
+                "",
+                "₹64,700.00",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "B2B Lead Generation",
+      "tables": [
+        {
+          "header": [
+            [
+              {
+                "label": "Channel",
+                "rowspan": 2,
+                "colspan": 1
+              },
+              {
+                "label": "Previous Day",
+                "rowspan": 1,
+                "colspan": 3
+              },
+              {
+                "label": "MTD",
+                "rowspan": 1,
+                "colspan": 3
+              }
+            ],
+            [
+              {
+                "label": "Spend",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Leads",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "CPL",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Spend",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Leads",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "CPL",
+                "rowspan": 1,
+                "colspan": 1
+              }
+            ]
+          ],
+          "rows": [
+            {
+              "key": "facebook",
+              "style": "normal",
+              "cells": [
+                "Facebook",
+                "₹2,974.80",
+                "13",
+                "₹228.83",
+                "₹41,131.58",
+                "135",
+                "₹304.68"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "simple_tabular": [
+    {
+      "title": "Daily Performance — 12 Oct 2026",
+      "tables": [
+        {
+          "header": [
+            [
+              {
+                "label": "Channel",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Spend",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "GA4 Revenue",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "ROAS",
+                "rowspan": 1,
+                "colspan": 1
+              }
+            ]
+          ],
+          "rows": [
+            {
+              "key": "meta",
+              "style": "normal",
+              "cells": [
+                "Meta Ads",
+                "₹9,651.70",
+                "₹1,232.60",
+                "0.13"
+              ]
+            },
+            {
+              "key": "google",
+              "style": "normal",
+              "cells": [
+                "Google Ads",
+                "₹14,650.35",
+                "₹34,687.40",
+                "2.37"
+              ]
+            },
+            {
+              "key": "paid_total",
+              "style": "total",
+              "cells": [
+                "Total Paid",
+                "₹24,302.05",
+                "₹35,920.00",
+                "1.48"
+              ]
+            },
+            {
+              "key": "shopify",
+              "style": "normal",
+              "cells": [
+                "Shopify Revenue",
+                "",
+                "₹22,600.00",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary_reference": [
+    {
+      "title": "",
+      "tables": [
+        {
+          "header": [
+            [
+              {
+                "label": "Channel",
+                "rowspan": 2,
+                "colspan": 1
+              },
+              {
+                "label": "22/10/2026",
+                "rowspan": 1,
+                "colspan": 4
+              },
+              {
+                "label": "MTD - October'26",
+                "rowspan": 1,
+                "colspan": 4
+              },
+              {
+                "label": "MTD - September'26",
+                "rowspan": 1,
+                "colspan": 4
+              }
+            ],
+            [
+              {
+                "label": "Spends",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Revenue",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Sessions",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "ROAS",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Spends",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Revenue",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Sessions",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "ROAS",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Spends",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Revenue",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "Sessions",
+                "rowspan": 1,
+                "colspan": 1
+              },
+              {
+                "label": "ROAS",
+                "rowspan": 1,
+                "colspan": 1
+              }
+            ]
+          ],
+          "rows": [
+            {
+              "key": "google",
+              "style": "normal",
+              "cells": [
+                "Google",
+                "-",
+                "32,323.15",
+                "576.00",
+                "-",
+                "-",
+                "4,146,615.24",
+                "64,600.00",
+                "-",
+                "-",
+                "4,658,228.23",
+                "87,133.00",
+                "-"
+              ]
+            },
+            {
+              "key": "facebook",
+              "style": "normal",
+              "cells": [
+                "Facebook",
+                "65,964.73",
+                "8,294.25",
+                "406.00",
+                "0.13",
+                "1,689,315.74",
+                "2,134,596.49",
+                "60,881.00",
+                "1.26",
+                "282,481.95",
+                "6,844,099.41",
+                "193,800.00",
+                "24.23"
+              ]
+            },
+            {
+              "key": "marketing_total",
+              "style": "total",
+              "cells": [
+                "Marketing Total",
+                "65,964.73",
+                "40,617.40",
+                "982.00",
+                "0.62",
+                "1,689,315.74",
+                "6,281,211.72",
+                "125,481.00",
+                "3.72",
+                "282,481.95",
+                "11,502,327.64",
+                "280,933.00",
+                "40.72"
+              ]
+            },
+            {
+              "key": "affiliate",
+              "style": "normal",
+              "cells": [
+                "Affiliate",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-"
+              ]
+            },
+            {
+              "key": "organic",
+              "style": "normal",
+              "cells": [
+                "Organic",
+                "-",
+                "8,873.38",
+                "144.00",
+                "-",
+                "-",
+                "575,976.53",
+                "18,017.00",
+                "-",
+                "-",
+                "568,497.70",
+                "25,282.00",
+                "-"
+              ]
+            },
+            {
+              "key": "direct",
+              "style": "normal",
+              "cells": [
+                "Direct",
+                "-",
+                "33,867.15",
+                "563.00",
+                "-",
+                "-",
+                "1,835,167.45",
+                "493,203.00",
+                "-",
+                "-",
+                "1,414,132.43",
+                "418,499.00",
+                "-"
+              ]
+            },
+            {
+              "key": "email",
+              "style": "normal",
+              "cells": [
+                "Email",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-"
+              ]
+            },
+            {
+              "key": "whatsapp",
+              "style": "normal",
+              "cells": [
+                "WhatsApp",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-"
+              ]
+            },
+            {
+              "key": "referral",
+              "style": "normal",
+              "cells": [
+                "Referral/Unassigned",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-"
+              ]
+            },
+            {
+              "key": "total",
+              "style": "total",
+              "cells": [
+                "Total",
+                "65,964.73",
+                "83,357.93",
+                "1,689.00",
+                "1.26",
+                "1,689,315.74",
+                "8,692,355.70",
+                "636,701.00",
+                "5.15",
+                "282,481.95",
+                "13,484,957.77",
+                "724,714.00",
+                "47.74"
+              ]
+            },
+            {
+              "key": "total_without_affiliate",
+              "style": "total",
+              "cells": [
+                "Total Without Affiliate",
+                "65,964.73",
+                "83,357.93",
+                "1,689.00",
+                "1.26",
+                "1,689,315.74",
+                "8,692,355.70",
+                "636,701.00",
+                "5.15",
+                "282,481.95",
+                "13,484,957.77",
+                "724,714.00",
+                "47.74"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
